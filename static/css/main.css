@@ -1,1 +1,171 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+/*RESET*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*COMPONTENTS*/
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/*MIXINS*/
+/*COLORS*/
+/*COMMON CLASSES*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+}
+
+/*NAVIGATION*/
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+  width: 100%;
+}
+
+.burger-btn__box {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+  position: absolute;
+  right: 0;
+  height: 3px;
+  content: '';
+  background-color: #fff;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.burger-btn__bars {
+  width: 100%;
+}
+
+.burger-btn__bars::after {
+  top: 13px;
+  width: 60%;
+}
+
+.burger-btn__bars::before {
+  top: 27px;
+  width: 30%;
+}
+
+/*HEADER*/
+.header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  height: 90vh;
+  padding: 2em;
+  text-align: center;
+  background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/header/header_mini.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+}
+
+.header__heading {
+  font-family: 'Bungee', cursive;
+  font-size: 7.5rem;
+}
+
+.header__text {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.header__btn {
+  position: absolute;
+  bottom: 6em;
+  padding: 0.4em 1.3em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+/*BREAKPOINTS*/
+@media (min-width: 375px) {
+  /*HEADER*/
+  .header__heading {
+    font-size: 9rem;
+  }
+}
+
+@media (min-width: 576px) {
+  /*NAVIGATION*/
+  .burger-btn__box {
+    width: 60px;
+    height: 40px;
+  }
+  .burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
+    height: 3.5px;
+  }
+  .burger-btn__bars::after {
+    top: 16px;
+    width: 60%;
+  }
+  .burger-btn__bars::before {
+    top: 32px;
+    width: 30%;
+  }
+  /*HEADER*/
+  .header {
+    background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/header/header_big.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  .header__heading {
+    font-size: 12rem;
+  }
+  .header__text {
+    font-size: 1.6rem;
+  }
+  .header__btn {
+    font-size: 1.6rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

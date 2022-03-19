@@ -1,0 +1,46 @@
+@media (min-width: 576px) {
+
+    /*NAVIGATION*/
+    .burger-btn {
+        &__box {
+            width: 60px;
+            height: 40px;
+        }
+
+        &__bars,
+        &__bars::after,
+        &__bars::before {
+            height: 3.5px;
+        }
+
+        &__bars {
+    
+            &::after {
+                top: 16px;
+                width: 60%;
+            }
+
+            &::before {
+                top: 32px;
+                width: 30%;
+            }
+        }
+    }
+
+    /*HEADER*/
+    .header {
+        @include heroImages('../img/header/header_big.jpeg');
+
+        &__heading {
+            font-size: 12rem;
+        }
+
+        &__text {
+            font-size: 1.6rem;
+        }
+
+        &__btn {
+            font-size: 1.6rem;
+        }
+    }
+}
