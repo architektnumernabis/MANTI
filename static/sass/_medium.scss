@@ -27,6 +27,12 @@
         }
     }
 
+    .navbar {
+        &__item {
+            font-size: 2.5rem;
+        }
+    }
+
     /*HEADER*/
     .header {
         @include heroImages('../img/header/header_big.jpeg');

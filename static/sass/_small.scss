@@ -1,4 +1,10 @@
 @media(min-width: 375px) {
+    /*NAVIGATION*/ 
+    .navbar {
+        &__item {
+            font-size: 1.6rem;
+        }
+    }
     /*HEADER*/ 
     .header {
         &__heading {
