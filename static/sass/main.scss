@@ -136,7 +136,7 @@ body {
     height: 90vh;
     padding: 2em;
     text-align: center;
-    @include heroImages('../img/header/header_mini.jpeg');
+    @include heroImages('../img/header/header_mini.jpeg', fixed);
     clip-path: polygon(0 0,
             100% 0,
             100% calc(100% - 10vw),
@@ -166,6 +166,45 @@ body {
         text-decoration: none;
         background-color: #fff;
     }
+}
+
+/*MAIN*/
+/*ABOUT-ME*/
+.about-me {
+    position: relative;
+
+    .section-heading {
+        color: $black;
+    }
+
+    p {
+        padding: 2em 5em;
+    }
+}
+
+/*WHY SWIM?*/
+.why-swim {
+    position: relative;
+    @include heroImages('../img/why swim/swim_small.jpeg', scroll);
+    background-attachment: scroll;
+    min-height: 90vh;
+    clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 100%);
+    overflow: hidden;
+}
+
+/*SWIMMERS OF A MONTH*/
+.best-swimmers {
+    position: relative;
+    @include heroImages('../img/achievements/achievements_small.jpeg', scroll);
+    background-attachment: scroll;
+    min-height: 90vh;
+    clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+    margin-top: -10vw;
+}
+
+/*CONTACT*/
+.contact {
+    height: 50vh;
 }
 
 /*BREAKPOINTS*/

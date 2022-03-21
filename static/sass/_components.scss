@@ -1,5 +1,58 @@
+/*COLORS*/
+@import './colors';
+
 .wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
+}
+
+.section-heading {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 300;
+    padding: 1em 0;
+    color: $white;
+}
+
+.section-padding {
+    padding: 4em 2em;
+}
+
+.shadow {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+@media (min-width: 375px) {
+    .section-heading {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 576px) {
+    .section-heading {
+        font-size: 4rem;
+    }
+
+    .section-padding {
+        padding: 6em 2em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section-heading {
+        font-size: 4.8rem;
+    }
+
+    .section-padding {
+        padding: 8em 2em;
+    }
 }

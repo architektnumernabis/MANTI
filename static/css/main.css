@@ -9,10 +9,58 @@
 }
 
 /*COMPONTENTS*/
+/*COLORS*/
 .wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
+}
+
+.section-heading {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 1em 0;
+  color: #fff;
+}
+
+.section-padding {
+  padding: 4em 2em;
+}
+
+.shadow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 375px) {
+  .section-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .section-heading {
+    font-size: 4rem;
+  }
+  .section-padding {
+    padding: 6em 2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-heading {
+    font-size: 4.8rem;
+  }
+  .section-padding {
+    padding: 8em 2em;
+  }
 }
 
 /*MIXINS*/
@@ -197,6 +245,53 @@ body {
   background-color: #fff;
 }
 
+/*MAIN*/
+/*ABOUT-ME*/
+.about-me {
+  position: relative;
+}
+
+.about-me .section-heading {
+  color: black;
+}
+
+.about-me p {
+  padding: 2em 5em;
+}
+
+/*WHY SWIM?*/
+.why-swim {
+  position: relative;
+  background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/why swim/swim_small.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-attachment: scroll;
+  min-height: 90vh;
+  -webkit-clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 100%);
+  overflow: hidden;
+}
+
+/*SWIMMERS OF A MONTH*/
+.best-swimmers {
+  position: relative;
+  background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/achievements/achievements_small.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-attachment: scroll;
+  min-height: 90vh;
+  -webkit-clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+          clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+  margin-top: -10vw;
+}
+
+/*CONTACT*/
+.contact {
+  height: 50vh;
+}
+
 /*BREAKPOINTS*/
 @media (min-width: 375px) {
   /*NAVIGATION*/
@@ -244,6 +339,36 @@ body {
   }
   .header__btn {
     font-size: 1.6rem;
+  }
+  /*MAIN*/
+  /*ABOUT-ME*/
+  .about-me p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /*MAIN*/
+  /*ABOUT-ME*/
+  .about-me__content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  /*WHY SWIM*/
+  .why-swim {
+    background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/why swim/swim_big.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
+  /*SWIMMERS OF A MONTH*/
+  .best-swimmers {
+    background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/achievements/achievements__big.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
   }
 }
 

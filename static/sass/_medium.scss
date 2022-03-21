@@ -14,7 +14,7 @@
         }
 
         &__bars {
-    
+
             &::after {
                 top: 16px;
                 width: 60%;
@@ -35,7 +35,7 @@
 
     /*HEADER*/
     .header {
-        @include heroImages('../img/header/header_big.jpeg');
+        @include heroImages('../img/header/header_big.jpeg', fixed);
 
         &__heading {
             font-size: 12rem;
@@ -49,4 +49,34 @@
             font-size: 1.6rem;
         }
     }
+
+    /*MAIN*/
+    /*ABOUT-ME*/
+    .about-me {
+        p {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    /*MAIN*/
+    /*ABOUT-ME*/
+    .about-me {
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /*WHY SWIM*/
+    .why-swim {
+        @include heroImages ('../img/why swim/swim_big.jpeg', scroll);
+    }
+
+    /*SWIMMERS OF A MONTH*/ 
+    .best-swimmers {
+        @include heroImages ('../img/achievements/achievements__big.jpeg', scroll);
+    }
+
 }
