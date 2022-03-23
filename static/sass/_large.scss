@@ -5,4 +5,31 @@
             font-size: 3rem;
         }
     }
+
+    /*ABOUT ME*/ 
+    .about-me {
+        @include backgroundGradient('../img/about-me/about-me-big.jpeg');
+        padding-bottom: 13em;
+    }
+
+    /*WHY SWIM*/ 
+    .why-swim {
+        &__box {
+            grid-template-columns: repeat(4,1fr);
+            padding-bottom: 12em;
+        }
+
+        &__item {
+            img {
+                width: 7em;
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+      /*ABOUT ME*/ 
+      .about-me {
+        padding-bottom: 10em;
+    }
 }

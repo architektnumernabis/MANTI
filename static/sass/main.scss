@@ -20,6 +20,10 @@ body {
     font-family: 'Prompt', sans-serif;
 }
 
+section {
+    overflow: hidden;
+}
+
 /*NAVIGATION*/
 .burger-btn {
     position: fixed;
@@ -172,6 +176,8 @@ body {
 /*ABOUT-ME*/
 .about-me {
     position: relative;
+    @include backgroundGradient('../img/about-me/about-me.jpeg');
+    padding: 3em 2em;
 
     .section-heading {
         color: $black;
@@ -187,9 +193,25 @@ body {
     position: relative;
     @include heroImages('../img/why swim/swim_small.jpeg', scroll);
     background-attachment: scroll;
-    min-height: 90vh;
     clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 100%);
     overflow: hidden;
+
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    &__item {
+        padding: 2em 0;
+        font-size: 1.2rem;
+        color: $white;
+        z-index: 10;
+
+        img {
+            width: 5em;
+        }
+    }
 }
 
 /*SWIMMERS OF A MONTH*/

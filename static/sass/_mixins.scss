@@ -5,12 +5,8 @@
     background-attachment: $attachment;
 }
 
-@mixin sectionHeading ($color) {
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    font-weight: 300;
-    padding: 1em 0;
-    color: $color;
+@mixin backgroundGradient ($bgImg) {
+    background-image: linear-gradient(0deg, $white, rgba(255, 255, 255, 0.68), $white), url($bgImg);
+    background-size: cover;
+    background-position: center;
 }

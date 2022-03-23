@@ -57,6 +57,20 @@
             font-size: 1.4rem;
         }
     }
+
+    /*WHY SWIM*/ 
+    .why-swim {
+        &__box {
+            grid-template-columns: repeat(2,1fr);
+            padding-bottom: 5em;
+        }
+
+        &__item {
+            img {
+                width: 6em;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) {

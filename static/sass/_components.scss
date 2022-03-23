@@ -7,6 +7,13 @@
     max-width: 1200px;
 }
 
+.line {
+    background-color: $black;
+    width: 50px;
+    height: 3px;
+    margin: 0 auto -3em;
+}
+
 .section-heading {
     position: relative;
     text-align: center;
@@ -53,6 +60,6 @@
     }
 
     .section-padding {
-        padding: 8em 2em;
+        padding: 10em 2em;
     }
 }
