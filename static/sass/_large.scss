@@ -1,21 +1,22 @@
 @media (min-width: 992px) {
-    /*NAVIGATION*/ 
+
+    /*NAVIGATION*/
     .navbar {
         &__item {
             font-size: 3rem;
         }
     }
 
-    /*ABOUT ME*/ 
+    /*ABOUT ME*/
     .about-me {
         @include backgroundGradient('../img/about-me/about-me-big.jpeg');
         padding-bottom: 13em;
     }
 
-    /*WHY SWIM*/ 
+    /*WHY SWIM*/
     .why-swim {
         &__box {
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
             padding-bottom: 12em;
         }
 
@@ -28,8 +29,22 @@
 }
 
 @media(min-width: 1200px) {
-      /*ABOUT ME*/ 
-      .about-me {
+
+    /*ABOUT ME*/
+    .about-me {
         padding-bottom: 10em;
+    }
+
+    /*MAIN*/
+    /*SWIMMERS OF A MONTH*/
+    .best-swimmers {
+        padding-bottom: 20em;
+
+        &__btn {
+            margin: 4em -3em;
+            a {
+                font-size: 1.3rem;
+            }
+        }
     }
 }

@@ -168,7 +168,7 @@ section {
         color: $black;
         cursor: pointer;
         text-decoration: none;
-        background-color: #fff;
+        background-color: #90E0EF;
     }
 }
 
@@ -219,9 +219,54 @@ section {
     position: relative;
     @include heroImages('../img/achievements/achievements_small.jpeg', scroll);
     background-attachment: scroll;
-    min-height: 90vh;
     clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 calc(100% - 10vw));
     margin-top: -10vw;
+    padding-bottom: 10em;
+
+
+    &__card {
+        text-align: center;
+        padding: 3em 1em;
+        z-index: 100;
+
+        img {
+            max-width: 200px;
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px $black;
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        padding: 2em 0;
+        color: $white;
+    }
+
+    &__text-primary {
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+    &__text-secondary {
+        font-style: italic;
+    }
+
+    &__btn {
+        position: absolute;
+        padding: 0.4em 1.3em;
+        margin: 1.5em -3em;
+        left: 50%;
+        border: none;
+        border-radius: 8px;
+        background-color: #90E0EF;
+
+        a {
+            text-decoration: none;
+            color: $black;
+            font-size: 1.1rem;
+        }
+    }
+
 }
 
 /*CONTACT*/

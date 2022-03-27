@@ -58,10 +58,10 @@
         }
     }
 
-    /*WHY SWIM*/ 
+    /*WHY SWIM*/
     .why-swim {
         &__box {
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
             padding-bottom: 5em;
         }
 
@@ -71,9 +71,17 @@
             }
         }
     }
+
+    /*SWIMMERS OF A MONTH*/
+    .best-swimmers {
+        &__btn {
+            padding: 0.6em 1.5em;
+        }
+    }
 }
 
 @media (min-width: 768px) {
+
     /*MAIN*/
     /*ABOUT-ME*/
     .about-me {
@@ -88,9 +96,29 @@
         @include heroImages ('../img/why swim/swim_big.jpeg', scroll);
     }
 
-    /*SWIMMERS OF A MONTH*/ 
+    /*SWIMMERS OF A MONTH*/
     .best-swimmers {
         @include heroImages ('../img/achievements/achievements__big.jpeg', scroll);
-    }
+        padding-bottom: 13em;
 
+        &__btn {
+            padding: 0.6em 1.5em;
+        }
+
+    }
+}
+
+@media (min-width: 819px) {
+
+    /*SWIMMERS OF A MONTH*/
+    .best-swimmers {
+        &__card {
+            transition: transform .2s;
+            transform: scale(0.7);
+        }
+
+        &__card.slick-current+&__card {
+            transform: scale(1.2);
+        }
+    }
 }
