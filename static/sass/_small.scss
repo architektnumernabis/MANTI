@@ -11,4 +11,14 @@
             font-size: 9rem;
         }
     }
+
+    /*MAIN*/ 
+    /*SWIMMERS OF THE MONTH*/ 
+    .best-swimmers {
+        .section-heading {
+            &::before {
+                top: 7%;
+            }
+        }
+    }
 }

@@ -33,6 +33,15 @@
   color: #fff;
 }
 
+.section-heading::before {
+  content: '01';
+  position: absolute;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.1);
+  left: 0;
+  top: 5%;
+}
+
 .section-padding {
   padding: 4em 2em;
 }
@@ -58,6 +67,12 @@
   }
   .section-padding {
     padding: 6em 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-heading::before {
+    font-size: 3em;
   }
 }
 
@@ -247,13 +262,13 @@ section {
   position: absolute;
   bottom: 6em;
   padding: 0.4em 1.3em;
-  border: none;
+  border: 2px solid #fff;
   border-radius: 8px;
   font-size: 1.1rem;
-  color: black;
+  color: #fff;
   cursor: pointer;
   text-decoration: none;
-  background-color: #90E0EF;
+  background-color: transparent;
 }
 
 /*MAIN*/
@@ -286,6 +301,10 @@ section {
   -webkit-clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 100%);
   overflow: hidden;
+}
+
+.why-swim .section-heading::before {
+  content: '';
 }
 
 .why-swim__box {
@@ -321,6 +340,18 @@ section {
   padding-bottom: 10em;
 }
 
+.best-swimmers .section-heading::before {
+  content: '02';
+  right: -5%;
+  left: inherit;
+  top: 20%;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.best-swimmers__box {
+  position: relative;
+}
+
 .best-swimmers__card {
   text-align: center;
   padding: 3em 1em;
@@ -354,15 +385,90 @@ section {
   padding: 0.4em 1.3em;
   margin: 1.5em -3em;
   left: 50%;
-  border: none;
+  border: 2px solid #fff;
   border-radius: 8px;
-  background-color: #90E0EF;
+  background-color: transparent;
 }
 
 .best-swimmers__btn a {
   text-decoration: none;
-  color: black;
+  color: #fff;
   font-size: 1.1rem;
+}
+
+.best-swimmers .slick-arrow {
+  position: absolute;
+  top: 40%;
+  color: transparent;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.best-swimmers .slick-prev {
+  left: 0;
+  background-image: url("../img/achievements/arrow-left.svg");
+}
+
+.best-swimmers .slick-next {
+  right: 0;
+  background-image: url("../img/achievements/arrow-right.svg");
+}
+
+/*NEWS*/
+.news {
+  padding: 0 2em;
+}
+
+.news .section-heading {
+  color: black;
+}
+
+.news .section-heading::before {
+  content: '03';
+  top: 5%;
+  left: -5%;
+}
+
+.news__boxes {
+  padding: 6em 0;
+}
+
+.news__box {
+  position: relative;
+  max-width: 500px;
+}
+
+.news__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.news__body {
+  padding: 8em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 10px 10px 10px #7c7c7c;
+          box-shadow: 10px 10px 10px #7c7c7c;
+}
+
+.news__heading {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.news__text {
+  display: none;
 }
 
 /*CONTACT*/
@@ -379,6 +485,11 @@ section {
   /*HEADER*/
   .header__heading {
     font-size: 9rem;
+  }
+  /*MAIN*/
+  /*SWIMMERS OF THE MONTH*/
+  .best-swimmers .section-heading::before {
+    top: 7%;
   }
 }
 
@@ -420,6 +531,9 @@ section {
   }
   /*MAIN*/
   /*ABOUT-ME*/
+  .about-me .section-heading::before {
+    left: 10%;
+  }
   .about-me p {
     font-size: 1.4rem;
   }
@@ -433,14 +547,25 @@ section {
     width: 6em;
   }
   /*SWIMMERS OF A MONTH*/
+  .best-swimmers .section-heading::before {
+    right: 5%;
+  }
   .best-swimmers__btn {
     padding: 0.6em 1.5em;
+  }
+  /*NEWS*/
+  .news .section-heading::before {
+    left: 10%;
   }
 }
 
 @media (min-width: 768px) {
   /*MAIN*/
   /*ABOUT-ME*/
+  .about-me .section-heading::before {
+    top: -15%;
+    left: 0;
+  }
   .about-me__content {
     display: -ms-grid;
     display: grid;
@@ -462,8 +587,17 @@ section {
     background-attachment: scroll;
     padding-bottom: 13em;
   }
+  .best-swimmers .section-heading::before {
+    top: -15%;
+    right: 0;
+  }
   .best-swimmers__btn {
     padding: 0.6em 1.5em;
+  }
+  /*NEWS*/
+  .news .section-heading::before {
+    top: -15%;
+    left: 0;
   }
 }
 

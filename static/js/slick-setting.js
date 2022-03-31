@@ -14,9 +14,17 @@ $('.carousel').slick({
             }
         },
         {
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                slidesToShow: 2
+            }
+        },
+        {
             breakpoint: 819,
             settings: {
-                slidesToShow: 3
+                slidesToShow: 3,
+                arrows: true
             }
         }
     ]

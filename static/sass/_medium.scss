@@ -53,6 +53,12 @@
     /*MAIN*/
     /*ABOUT-ME*/
     .about-me {
+        .section-heading {
+            &::before {
+                left: 10%;
+            }
+        }
+
         p {
             font-size: 1.4rem;
         }
@@ -74,8 +80,23 @@
 
     /*SWIMMERS OF A MONTH*/
     .best-swimmers {
+        .section-heading {
+            &::before {
+                right: 5%;
+            }
+        }
+
         &__btn {
             padding: 0.6em 1.5em;
+        }
+    }
+
+    /*NEWS*/
+    .news {
+        .section-heading {
+            &::before {
+                left: 10%;
+            }
         }
     }
 }
@@ -85,6 +106,13 @@
     /*MAIN*/
     /*ABOUT-ME*/
     .about-me {
+        .section-heading {
+            &::before {
+                top: -15%;
+                left: 0;
+            }
+        }
+
         &__content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -101,10 +129,26 @@
         @include heroImages ('../img/achievements/achievements__big.jpeg', scroll);
         padding-bottom: 13em;
 
+        .section-heading {
+            &::before {
+                top: -15%;
+                right: 0;
+            }
+        }
+
         &__btn {
             padding: 0.6em 1.5em;
         }
+    }
 
+    /*NEWS*/
+    .news {
+        .section-heading {
+            &::before {
+                top: -15%;
+                left: 0;
+            }
+        }
     }
 }
 

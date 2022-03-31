@@ -162,13 +162,13 @@ section {
         position: absolute;
         bottom: 6em;
         padding: 0.4em 1.3em;
-        border: none;
+        border: 2px solid $white;
         border-radius: 8px;
         font-size: 1.1rem;
-        color: $black;
+        color: $white;
         cursor: pointer;
         text-decoration: none;
-        background-color: #90E0EF;
+        background-color: transparent;
     }
 }
 
@@ -195,6 +195,10 @@ section {
     background-attachment: scroll;
     clip-path: polygon(0 0, 100% 10vw, 100% 100%, 0 100%);
     overflow: hidden;
+
+    .section-heading::before {
+        content: '';
+    }
 
     &__box {
         display: grid;
@@ -223,6 +227,19 @@ section {
     margin-top: -10vw;
     padding-bottom: 10em;
 
+    .section-heading {
+        &::before {
+            content: '02';
+            right: -5%;
+            left: inherit;
+            top: 20%;
+            color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    &__box {
+        position: relative;
+    }
 
     &__card {
         text-align: center;
@@ -256,17 +273,92 @@ section {
         padding: 0.4em 1.3em;
         margin: 1.5em -3em;
         left: 50%;
-        border: none;
+        border: 2px solid $white;
         border-radius: 8px;
-        background-color: #90E0EF;
+        background-color: transparent;
 
         a {
             text-decoration: none;
-            color: $black;
+            color: $white;
             font-size: 1.1rem;
         }
     }
 
+    .slick-arrow {
+        position: absolute;
+        top: 40%;
+        color: transparent;
+        background-color: transparent;
+        background-size: cover;
+        background-position: center;
+        border: none;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 100;
+
+    }
+
+    .slick-prev {
+        left: 0;
+        background-image: url('../img/achievements/arrow-left.svg');
+    }
+
+    .slick-next {
+        right: 0;
+        background-image: url('../img/achievements/arrow-right.svg');
+    }
+}
+
+/*NEWS*/
+.news {
+    padding: 0 2em;
+
+    .section-heading {
+        color: $black;
+
+        &::before {
+            content: '03';
+            top: 5%;
+            left: -5%;
+        }
+    }
+
+    &__boxes {
+        padding: 6em 0;
+    }
+
+    &__box {
+        position: relative;
+        max-width: 500px;
+
+    }
+
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    &__body {
+        padding: 8em;
+        color: $white;
+        background-color: rgba(0, 0, 0, .3);
+        box-shadow: 10px 10px 10px rgb(124, 124, 124);
+
+    }
+
+    &__heading {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        display: none;
+    }
 }
 
 /*CONTACT*/
