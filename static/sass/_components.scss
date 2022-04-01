@@ -45,7 +45,31 @@
     bottom: 0;
     left: 0;
     right: 0;
+}
 
+.slick-arrow {
+    position: absolute;
+    top: 40%;
+    color: transparent;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 100;
+
+}
+
+.slick-prev {
+    left: 0;
+    background-image: url('../img/achievements/arrow-left.svg');
+}
+
+.slick-next {
+    right: 0;
+    background-image: url('../img/achievements/arrow-right.svg');
 }
 
 @media (min-width: 375px) {

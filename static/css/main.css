@@ -55,6 +55,30 @@
   right: 0;
 }
 
+.slick-arrow {
+  position: absolute;
+  top: 40%;
+  color: transparent;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.slick-prev {
+  left: 0;
+  background-image: url("../img/achievements/arrow-left.svg");
+}
+
+.slick-next {
+  right: 0;
+  background-image: url("../img/achievements/arrow-right.svg");
+}
+
 @media (min-width: 375px) {
   .section-heading {
     font-size: 3rem;
@@ -359,7 +383,8 @@ section {
 }
 
 .best-swimmers__card img {
-  max-width: 200px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   -webkit-box-shadow: 5px 5px 10px black;
           box-shadow: 5px 5px 10px black;
@@ -396,30 +421,6 @@ section {
   font-size: 1.1rem;
 }
 
-.best-swimmers .slick-arrow {
-  position: absolute;
-  top: 40%;
-  color: transparent;
-  background-color: transparent;
-  background-size: cover;
-  background-position: center;
-  border: none;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.best-swimmers .slick-prev {
-  left: 0;
-  background-image: url("../img/achievements/arrow-left.svg");
-}
-
-.best-swimmers .slick-next {
-  right: 0;
-  background-image: url("../img/achievements/arrow-right.svg");
-}
-
 /*NEWS*/
 .news {
   padding: 0 2em;
@@ -441,9 +442,9 @@ section {
 
 .news__box {
   position: relative;
-  max-width: 500px;
   -webkit-perspective: 800px;
           perspective: 800px;
+  margin: 4em;
 }
 
 .news__box:hover .news__img {
@@ -533,6 +534,20 @@ section {
   background-color: #fff;
   font-family: 'Prompt', sans-serif;
   padding: 0.4em 1.3em;
+}
+
+.news .slick-arrow {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.news .slick-prev {
+  left: -40px;
+}
+
+.news .slick-next {
+  right: -40px;
 }
 
 /*CONTACT*/
