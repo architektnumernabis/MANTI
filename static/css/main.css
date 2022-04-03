@@ -552,7 +552,132 @@ section {
 
 /*CONTACT*/
 .contact {
-  height: 50vh;
+  position: relative;
+  padding: 0;
+}
+
+.contact iframe {
+  max-width: 250px;
+}
+
+.contact .section-heading {
+  color: black;
+}
+
+.contact .section-heading::before {
+  content: '04';
+  right: 2px;
+  left: inherit;
+  top: 6%;
+}
+
+.contact__box--column {
+  text-align: center;
+  padding: 1em;
+}
+
+.contact__box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__box input,
+.contact__box textarea,
+.contact__box button {
+  font-family: 'Prompt', sans-serif;
+  border-radius: 8px;
+  border: none;
+  padding: 0.5em;
+  background-color: gainsboro;
+  margin: 0.5em;
+}
+
+.contact__box button {
+  border: 2px solid black;
+  background-color: #fff;
+  width: 50%;
+  margin: 2em auto;
+}
+
+.contact .white-block {
+  bottom: 0px;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+}
+
+/*FOOTER*/
+.footer {
+  background-color: black;
+  color: #fff;
+  position: relative;
+  margin-top: -10vw;
+  z-index: -3;
+  /* &::before {
+        content: '';
+        position: absolute;
+        clip-path: polygon(50% calc(100% - 10vw), 0 0, 100% 0);
+        top: 0;
+        height: 200px;
+        width: 100%;
+        background-color: red;
+        z-index: 100;
+    }*/
+}
+
+.footer__box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  padding-top: 2em;
+  bottom: 0;
+}
+
+.footer__box img {
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.footer__box--one {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.footer__box--two {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.footer__box--three {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.footer__box--four {
+  position: relative;
+}
+
+.footer__box--four p {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  color: grey;
 }
 
 /*BREAKPOINTS*/
@@ -569,6 +694,10 @@ section {
   /*SWIMMERS OF THE MONTH*/
   .best-swimmers .section-heading::before {
     top: 7%;
+  }
+  /*CONTACT*/
+  .contact iframe {
+    max-width: 300px;
   }
 }
 
@@ -636,6 +765,16 @@ section {
   .news .section-heading::before {
     left: 10%;
   }
+  /*CONTACT*/
+  .contact .section-heading::before {
+    top: -15%;
+  }
+  .contact__box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 768px) {
@@ -678,6 +817,10 @@ section {
     top: -15%;
     left: 0;
   }
+  /*CONTACT*/
+  .contact iframe {
+    max-width: 350px;
+  }
 }
 
 @media (min-width: 819px) {
@@ -717,6 +860,10 @@ section {
   }
   .why-swim__item img {
     width: 7em;
+  }
+  /*CONTACT*/
+  .contact iframe {
+    max-width: 500px;
   }
 }
 

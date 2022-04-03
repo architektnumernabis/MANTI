@@ -285,7 +285,7 @@ section {
         }
     }
 
- 
+
 }
 
 /*NEWS*/
@@ -401,7 +401,126 @@ section {
 
 /*CONTACT*/
 .contact {
-    height: 50vh;
+    position: relative;
+    padding: 0;
+
+    iframe {
+        max-width: 250px;
+    }
+
+    .section-heading {
+        color: $black;
+
+        &::before {
+            content: '04';
+            right: 2px;
+            left: inherit;
+            top: 6%;
+        }
+    }
+
+    &__box {
+        &--column {
+            text-align: center;
+            padding: 1em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        textarea,
+        button {
+            font-family: 'Prompt', sans-serif;
+            border-radius: 8px;
+            border: none;
+            padding: 0.5em;
+            background-color: rgb(220, 220, 220);
+            margin: 0.5em;
+        }
+
+        button {
+            border: 2px solid $black;
+            background-color: $white;
+            width: 50%;
+            margin: 2em auto;
+
+        }
+    }
+
+    .white-block {
+        bottom: 0px;
+        width: 100%;
+        height: 100px;
+        background-color: $white;
+        
+        clip-path: polygon(0 0,
+        100% 0,
+        100% calc(100% - 10vw),
+        50% 100%,
+        0 calc(100% - 10vw));
+    }
+}
+
+/*FOOTER*/
+.footer {
+    background-color: $black;
+    color: $white;
+    position: relative;
+    margin-top: -10vw;
+    z-index: -3;
+    
+
+    /* &::before {
+        content: '';
+        position: absolute;
+        clip-path: polygon(50% calc(100% - 10vw), 0 0, 100% 0);
+        top: 0;
+        height: 200px;
+        width: 100%;
+        background-color: red;
+        z-index: 100;
+    }*/
+
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding-top: 2em;
+        bottom: 0;
+
+        img {
+            margin: 0 auto;
+            padding: 2em;
+        }
+
+        &--one {
+            grid-column: 1 / 2;
+        }
+
+        &--two {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        &--three {
+            grid-column: 2/3;
+        }
+
+        &--four {
+            position: relative;
+
+            p {
+                position: absolute;
+                right: 15px;
+                bottom: 15px;
+                color: grey;
+            }
+        }
+    }
 }
 
 /*BREAKPOINTS*/
