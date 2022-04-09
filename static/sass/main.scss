@@ -422,12 +422,20 @@ section {
     &__box {
         &--column {
             text-align: center;
-            padding: 1em;
+            padding: 2em;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            padding-bottom: 1.5em;
+
         }
 
         form {
             display: flex;
             flex-direction: column;
+            padding: 2em;
         }
 
         input,
@@ -446,21 +454,21 @@ section {
             background-color: $white;
             width: 50%;
             margin: 2em auto;
-
+            cursor: pointer;
         }
     }
 
     .white-block {
         bottom: 0px;
         width: 100%;
-        height: 100px;
+        height: 15vw;
         background-color: $white;
-        
+
         clip-path: polygon(0 0,
-        100% 0,
-        100% calc(100% - 10vw),
-        50% 100%,
-        0 calc(100% - 10vw));
+                100% 0,
+                100% calc(100% - 10vw),
+                50% 100%,
+                0 calc(100% - 10vw));
     }
 }
 
@@ -471,7 +479,7 @@ section {
     position: relative;
     margin-top: -10vw;
     z-index: -3;
-    
+
 
     /* &::before {
         content: '';
@@ -494,11 +502,17 @@ section {
 
         img {
             margin: 0 auto;
-            padding: 2em;
+            padding: 2em;   
+        }
+
+        a {
+            cursor: pointer;
+            z-index: 100;
         }
 
         &--one {
             grid-column: 1 / 2;
+            display: flex;
         }
 
         &--two {
@@ -508,16 +522,25 @@ section {
 
         &--three {
             grid-column: 2/3;
+            
+            .special-img {
+                display: flex;
+            }
+            
+            .text-phone {
+                display: none;
+            }
         }
 
         &--four {
             position: relative;
 
-            p {
+            .text {
                 position: absolute;
                 right: 15px;
                 bottom: 15px;
                 color: grey;
+                margin: auto 0;
             }
         }
     }

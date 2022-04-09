@@ -32,6 +32,19 @@
         iframe {
             max-width: 500px;
         }
+
+        &__box {
+            h3 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+       /*FOOTER*/ 
+       .footer {
+        &__box {
+            padding-top: 6em;
+        }
     }
 }
 
@@ -51,6 +64,17 @@
             margin: 4em -3em;
             a {
                 font-size: 1.3rem;
+            }
+        }
+    }
+
+       /*FOOTER*/ 
+       .footer {
+        &__box {
+            padding-top: 6vw;
+
+            img {
+                width: 80px;
             }
         }
     }

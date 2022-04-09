@@ -100,16 +100,24 @@
         }
     }
 
-    /*CONTACT*/ 
+    /*CONTACT*/
     .contact {
         .section-heading {
             &::before {
                 top: -15%;
             }
         }
+
         &__box {
             display: grid;
-            grid-template-columns: repeat(2,1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        &__box {
+            padding-top: 4em;
         }
     }
 }
@@ -164,10 +172,50 @@
         }
     }
 
-    /*CONTACT*/ 
+    /*CONTACT*/
     .contact {
         iframe {
             max-width: 350px;
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        &__box {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+
+            .special-img {
+                margin: 0;
+               
+            }
+
+            &--two {
+                grid-column: 3/4;
+                grid-row: 1/2;
+            }
+
+            &--three {
+                grid-row: 2/3;
+                display: flex;
+                justify-content: center;
+
+                .text-phone {
+                    display: block;
+                    font-size: 2rem;
+                    color: #0FFF50;
+                    margin: auto 0;
+                }
+            }
+
+            &--four {
+                grid-column: 3/4;
+                grid-row: 2/3;
+
+                .text {
+                    display: block;
+                }
+            }
         }
     }
 }
