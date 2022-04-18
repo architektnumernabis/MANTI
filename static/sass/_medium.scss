@@ -185,9 +185,17 @@
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
 
+            img {
+                cursor: pointer;
+                transition: transform .3s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
             .special-img {
                 margin: 0;
-               
             }
 
             &--two {
@@ -200,11 +208,21 @@
                 display: flex;
                 justify-content: center;
 
+                img {
+                    margin: 0;
+                }
+
                 .text-phone {
                     display: block;
                     font-size: 2rem;
                     color: #0FFF50;
                     margin: auto 0;
+                    cursor: pointer;
+                    transition: transform .3s;
+    
+                    &:hover {
+                        transform: scale(1.2);
+                    }
                 }
             }
 
