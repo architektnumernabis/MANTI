@@ -15,17 +15,19 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/8f23681658.js" crossorigin="anonymous"></script>
+    <!--STYLES FOR BURGER BTN-->
+    <link href="dist/hamburgers.css" rel="stylesheet">
     <!--MY STYLES-->
     <link rel="stylesheet" href="./static/css/main.css">
 </head>
 
 <body>
-    <!--BUTTON-->
-    <button class="burger-btn">
-        <div class="burger-btn__box">
-            <div class="burger-btn__bars burger-btn__bars--clicked"></div>
-        </div>
-    </button>
+    <!--BUTTON -->
+    <button class="hamburger hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>  
 
     <!--NAVIGATION-->
     <nav class="navbar">
@@ -39,16 +41,16 @@
 
     <!--HEADER-->
     <header class="header">
-        <h1 class="header__heading">MANTI</h1>
+        <h1 class="header__heading"><span>M</span><span>A</span><span>N</span><span>T</span><span>I</span></h1>
         <div class="header__text">"Godzina pływania to tylko 4% Twojego dnia!"</div>
-        <a href="#about-me" class="header__btn">Poznaj mnie</a>
+        <a href="#about-me" class="header__btn button">Poznaj mnie</a>
     </header>
 
     <!--MAIN-->
     <main>
 
         <!--ABOUT ME-->
-        <section class="about-me section-padding" id="about-me">
+        <section class="about-me section-padding white-section" id="about-me">
             <div class="wrapper">
                 <h2 class="section-heading">o mnie</h2>
                 <div class="about-me__content">
@@ -75,19 +77,19 @@
                 <h2 class="section-heading">dlaczego warto pływać?</h2>
                 <div class="why-swim__box">
                     <div class="why-swim__item">
-                        <img src="./static/img/why swim/activity.svg" alt="">
+                        <img src="./static/img/why swim/activity.svg" alt="Ikona przedstawiająca tętno">
                         <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div class="why-swim__item">
-                        <img src="./static/img/why swim/heart.svg" alt="">
+                        <img src="./static/img/why swim/heart.svg" alt="Ikona przedstawiająca serce">
                         <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div class="why-swim__item">
-                        <img src="./static/img/why swim/smile.svg" alt="">
+                        <img src="./static/img/why swim/smile.svg" alt="Ikona przedstawiająca uśmiech">
                         <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                     <div class="why-swim__item">
-                        <img src="./static/img/why swim/wifi-off.svg" alt="">
+                        <img src="./static/img/why swim/wifi-off.svg" alt="Ikona przedstawiająca przekreślony znak wifi">
                         <p>Lorem ipsum dolor sit amet.</p>
                     </div>
                 </div>
@@ -101,77 +103,77 @@
                 <h2 class="section-heading">pływacy miesiąca</h2>
                 <div class="best-swimmers__box carousel">
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/pazdziernik01.png" alt="">
+                        <img src="./static/img/achievements/pazdziernik01.png" alt="Zdjęcie przedstawiające najlepszego pływaka października 2021 - Antosia">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Antoś</p>
                             <p class="best-swimmers__text-secondary">październik 2021</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/pazdziernik02.png" alt="">
+                        <img src="./static/img/achievements/pazdziernik02.png" alt="Zdjęcie przedstawiające najlepszą pływaczkę października 2021 - Laurę">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Laura</p>
                             <p class="best-swimmers__text-secondary">październik 2021</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/listopad01.png" alt="">
+                        <img src="./static/img/achievements/listopad01.png" alt="Zdjęcie przedstawiające najlepszą pływaczkę listopada 2021 - Aurelię">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Aurelia</p>
                             <p class="best-swimmers__text-secondary">listopad 2021</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/listopad02.png" alt="">
+                        <img src="./static/img/achievements/listopad02.png" alt="Zdjęcie przedstawiające najlepszego pływaka listopada 2021 - Maćka">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Maciek</p>
                             <p class="best-swimmers__text-secondary">listopad 2021</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/grudzien01.png" alt="">
+                        <img src="./static/img/achievements/grudzien01.png" alt="Zdjęcie przedstawiające najlepszego pływaka grudnia 2021 - Janusza">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Janusz</p>
                             <p class="best-swimmers__text-secondary">grudzień 2021</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/grudzien02.png" alt="">
+                        <img src="./static/img/achievements/grudzien02.png" alt="Zdjęcie przedstawiające najlepszą pływaczkę grudnia 2021 - Karynę">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Karyna</p>
                             <p class="best-swimmers__text-secondary">grudzień 2021</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/styczen01.png" alt="">
+                        <img src="./static/img/achievements/styczen01.png" alt="Zdjęcie przedstawiające najlepszego pływaka stycznia 2022 - Jęrdulę">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Jędrula</p>
                             <p class="best-swimmers__text-secondary">styczeń 2022</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/styczen02.png" alt="">
+                        <img src="./static/img/achievements/styczen02.png" alt="Zdjęcie przedstawiające najlepszego pływaka stycznia 2022 - Jacka">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Jacek</p>
                             <p class="best-swimmers__text-secondary">styczeń 2022</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/luty01.png" alt="">
+                        <img src="./static/img/achievements/luty01.png" alt="Zdjęcie przedstawiające najlepszego pływaka lutego 2022 - Pawełka">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Pawełek</p>
                             <p class="best-swimmers__text-secondary">luty 2022</p>
                         </div>
                     </div>
                     <div class="best-swimmers__card">
-                        <img src="./static/img/achievements/luty02.png" alt="">
+                        <img src="./static/img/achievements/luty02.png" alt="Zdjęcie przedstawiające najlepszą pływaczkę lutego 2022 - Jadwigę">
                         <div class="best-swimmers__text">
                             <p class="best-swimmers__text-primary">Jadwiga</p>
                             <p class="best-swimmers__text-secondary">luty 2022</p>
                         </div>
                     </div>
                 </div>
-                <div class="best-swimmers__btn">
+                <div class="best-swimmers__btn button">
                     <a href="">Więcej</a>
                 </div>
             </div>

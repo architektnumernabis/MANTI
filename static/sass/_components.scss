@@ -1,17 +1,157 @@
 /*COLORS*/
 @import './colors';
 
+/*HAMBURGER ICON*/
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1em;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: $white;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    z-index: 1000;
+}
+
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger.is-active:hover {
+    opacity: 0.7;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: $white;
+}
+
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    padding: 2px 0q;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: $white;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+.hamburger--slider .hamburger-inner {
+    top: 2px;
+}
+
+.hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+}
+
+.hamburger--slider .hamburger-inner::after {
+    top: 20px;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+
+.hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0;
+}
+
+.hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+
+.hamburger-black {
+    background-color: $black;
+
+    &::before,
+    &::after {
+        background-color: $black;
+    }
+}
+
+/*OTHERS*/
 .wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
 
-.line {
-    background-color: $black;
-    width: 50px;
-    height: 3px;
-    margin: 0 auto -3em;
+.button {
+    position: absolute;
+    padding: 0.4em 1.3em;
+    border: 2px solid $white;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: $white;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.button::after, .button::before {
+    position: absolute;
+    display: block;
+    content: '';
+    transition: left .7s;
+}
+
+.button::before {
+    top: -30px;
+    left: -130px;
+    height: 220%;
+    width: 100px;
+    background-image: linear-gradient(-90deg, rgba(202, 240, 248,0.5), rgba(202, 240, 248, 0));
+    transform: rotate(20deg);
+}
+
+.button:hover::before {
+    left: 130%;
 }
 
 .section-heading {
