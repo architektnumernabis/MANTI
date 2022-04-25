@@ -26,10 +26,7 @@ const handleNav = () => {
 navButton.addEventListener('click', handleNav);
 
 
-
-
-
-
+//observer function that changes color of burger button depending on a background
 const observerOne = new IntersectionObserver(function (entries, observerOne) {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
