@@ -13,7 +13,5 @@ function iOS() {
   }
 
 if (iOS() == true) {
-    document.getElementById("header").style.backgroundAttachment = "scroll"
-    document.getElementById("header").style.backgroundPosition = "center"
-    document.getElementById("header").style.backgroundSize = "cover"
+    document.getElementById("header").style.backgroundAttachment = "scroll";
 }

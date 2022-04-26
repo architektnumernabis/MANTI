@@ -103,7 +103,7 @@ section {
     &__heading {
         font-family: 'Bungee', cursive;
         font-size: 6.6rem;
-       
+
         span {
             display: inline-block;
             animation: heading-animation 1s linear forwards;
@@ -277,6 +277,16 @@ section {
     &__box {
         position: relative;
         margin: 4em;
+
+        &:hover {
+            .img {
+                transform: perspective(600px) rotateY(-180deg);
+            }
+
+            .news__body {
+                transform: perspective(600px) rotateY(0deg);
+            }
+        }
     }
 
     &__img {
@@ -284,12 +294,20 @@ section {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: -1;
+        z-index: 0;
+        backface-visibility: hidden;
+        transform: perspective(600px) rotateY(0deg);
+        transition: transform 1s;
     }
+       
 
     &__body {
         padding: 8em;
-        color: $white;
+        color: $black;
+        transform: perspective(600px) rotateY(180deg);
+        backface-visibility: hidden;
+        z-index: 1;
+        background: $black;
     }
 
 
