@@ -262,6 +262,7 @@ section {
 
     .section-heading {
         color: $black;
+        padding: 2em;
 
         &::before {
             content: '03';
@@ -271,15 +272,15 @@ section {
     }
 
     &__boxes {
-        padding: 6em 0;
+        padding: 2em 0;
     }
 
     &__box {
         position: relative;
-        margin: 4em;
+        margin: 2em;
 
         &:hover {
-            .img {
+            .news__img {
                 transform: perspective(600px) rotateY(-180deg);
             }
 
@@ -289,25 +290,42 @@ section {
         }
     }
 
+    &__img,
+    &__body {
+        backface-visibility: hidden;
+        transition: transform .6s;
+        border-radius: 8px;
+    }
+
     &__img {
         position: absolute;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        z-index: 0;
-        backface-visibility: hidden;
         transform: perspective(600px) rotateY(0deg);
-        transition: transform 1s;
     }
-       
 
     &__body {
-        padding: 8em;
-        color: $black;
+        padding: 4em;
         transform: perspective(600px) rotateY(180deg);
-        backface-visibility: hidden;
-        z-index: 1;
-        background: $black;
+        background: $main-gradient;
+        text-align: center;
+        height: inherit;
+        min-height: 20vw;
+       
+    }
+
+    &__text-btn {
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 10px;
+        font-size: 0.7rem;
+        border: 1px solid $white;
+
+        &::before {
+            height: 300%;
+        }
+
     }
 
 

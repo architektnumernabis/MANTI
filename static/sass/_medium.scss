@@ -98,6 +98,21 @@
                 left: 10%;
             }
         }
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__heading {
+            font-size: 2rem;
+        }
+
+        &__text-btn {
+            font-size: 1.1rem;
+            border: 2px solid $white;
+        }
     }
 
     /*CONTACT*/
@@ -170,6 +185,11 @@
                 left: 0;
             }
         }
+
+        &__text-btn {
+            font-size: 1.1rem;
+            border: 2px solid $white;
+        }
     }
 
     /*CONTACT*/
@@ -219,7 +239,7 @@
                     margin: auto 0;
                     cursor: pointer;
                     transition: transform .3s;
-    
+
                     &:hover {
                         transform: scale(1.2);
                     }
