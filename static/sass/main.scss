@@ -49,9 +49,7 @@ section {
         transform: translateX(0);
     }
 
-    &__item,
-    &__item-second,
-    &__item-third {
+    &__item {
         @include navbar__item;
 
         &::before {
@@ -336,7 +334,20 @@ section {
             .news__body {
                 transform: perspective(600px) rotateY(0deg);
             }
+
+            .news__help {
+                transform: perspective(600px) rotateY(-180deg);
+            }
         }
+    }
+
+    &__help {
+        position: absolute;
+        z-index: 100;
+        right:5px;
+        top: 5px;
+        backface-visibility: hidden;
+        transition: transform .6s;
     }
 
     &__img,
@@ -363,6 +374,10 @@ section {
         background: $main-gradient;
         text-align: center;
         min-height: 20vw;
+    }
+
+    &__heading {
+        color: $white;
     }
 
     &__text-btn {
