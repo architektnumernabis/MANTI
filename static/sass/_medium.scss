@@ -59,139 +59,139 @@
         &__btn {
             font-size: 1.6rem;
         }
-
-        /*STYLES FOR BEST-SWIMMERS SUBSITE*/
-        .best-swimmers-heading {
-            font-size: 8rem;
-        }
     }
 
     /*HEADER FOR BEST SWIMMERS SUBSITE*/
     .header-best-swimmers {
         @include heroImages('../img/achievements/achievements__big.jpeg', fixed);
-    }
 
-    /*MAIN*/
-    /*ABOUT-ME*/
-    .about-me {
-        .section-heading {
-            &::before {
-                left: 10%;
-            }
-        }
-
-        p {
-            font-size: 1.4rem;
+        .best-swimmers-heading {
+            font-size: 8rem;
         }
     }
 
-    /*WHY SWIM*/
-    .why-swim {
-        &__box {
-            grid-template-columns: repeat(2, 1fr);
-            padding-bottom: 5em;
-        }
 
-        &__item {
-            img {
-                width: 6em;
+/*MAIN*/
+/*ABOUT-ME*/
+.about-me {
+    .section-heading {
+        &::before {
+            left: 10%;
+        }
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+}
+
+/*WHY SWIM*/
+.why-swim {
+    &__box {
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 5em;
+    }
+
+    &__item {
+        img {
+            width: 6em;
+        }
+    }
+}
+
+/*BEST SWIMMERS*/
+.best-swimmers {
+    .section-heading {
+        &::before {
+            right: 5%;
+        }
+    }
+
+    &__btn {
+        padding: 0.6em 1.5em;
+    }
+}
+
+/*BEST SWIMMERS SUBSITE*/
+.all-swimmers {
+    .section-heading {
+        padding-bottom: 1em;
+    }
+
+    .container {
+        .all-swimmers__box:nth-of-type(odd) {
+            .all-swimmers__box--left {
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+            .all-swimmers__box--right {
+                grid-column: 1/2;
+                grid-row: 1/2;
             }
         }
     }
 
-    /*SWIMMERS OF A MONTH*/
-    .best-swimmers {
-        .section-heading {
-            &::before {
-                right: 5%;
-            }
-        }
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+        padding: 3em;
 
-        &__btn {
-            padding: 0.6em 1.5em;
-        }
-    }
-
-    /*BEST SWIMMERS SUBSITE*/
-    .all-swimmers {
-        .section-heading {
-            padding-bottom: 1em;
-        }
-
-        .container {
-            .all-swimmers__box:nth-of-type(odd) {
-                .all-swimmers__box--left {
-                    grid-column: 2/3;
-                    grid-row: 1/2;
-                }
-
-                .all-swimmers__box--right {
-                    grid-column: 1/2;
-                    grid-row: 1/2;
-                }
-            }
-        }
-
-        &__box {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2em;
-            padding: 3em;
-
-            &--left,
-            &--right {
-                display: flex;
-                flex-direction: column;
-            }
-
-
-        }
-    }
-
-    /*NEWS*/
-    .news {
-        .section-heading {
-            &::before {
-                left: 10%;
-            }
-        }
-
-        &__body {
+        &--left,
+        &--right {
             display: flex;
             flex-direction: column;
-            justify-content: center;
         }
 
-        &__heading {
-            font-size: 2rem;
-        }
 
-        &__text-btn {
-            font-size: 1.1rem;
-            border: 2px solid $white;
+    }
+}
+
+/*NEWS*/
+.news {
+    .section-heading {
+        &::before {
+            left: 10%;
         }
     }
 
-    /*CONTACT*/
-    .contact {
-        .section-heading {
-            &::before {
-                top: -15%;
-            }
-        }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-        &__box {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+    &__heading {
+        font-size: 2rem;
+    }
+
+    &__text-btn {
+        font-size: 1.1rem;
+        border: 2px solid $white;
+    }
+}
+
+/*CONTACT*/
+.contact {
+    .section-heading {
+        &::before {
+            top: -15%;
         }
     }
 
-    /*FOOTER*/
-    .footer {
-        &__box {
-            padding-top: 4em;
-        }
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/*FOOTER*/
+.footer {
+    &__box {
+        padding-top: 4em;
+    }
+}
 }
 
 @media (min-width: 768px) {
@@ -217,7 +217,7 @@
         @include heroImages ('../img/why swim/swim_big.jpeg', scroll);
     }
 
-    /*SWIMMERS OF A MONTH*/
+    /*BEST SWIMMERS*/
     .best-swimmers {
         @include heroImages ('../img/achievements/achievements__big.jpeg', scroll);
         padding-bottom: 13em;
@@ -328,7 +328,7 @@
 
 @media (min-width: 819px) {
 
-    /*SWIMMERS OF A MONTH*/
+    /*BEST SWIMMERS*/
     .best-swimmers {
         &__card {
             transition: transform .2s;

@@ -489,7 +489,6 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /*STYLES FOR BEST-SWIMMERS SUBSITE*/
 }
 
 .header__heading {
@@ -545,10 +544,6 @@ section {
   opacity: 0;
 }
 
-.header .best-swimmers-heading {
-  font-size: 5rem;
-}
-
 /*HEADER FOR BEST SWIMMERS SUBSITE*/
 .header-best-swimmers {
   position: relative;
@@ -575,6 +570,10 @@ section {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.header-best-swimmers .best-swimmers-heading {
+  font-size: 5rem;
 }
 
 /*MAIN*/
@@ -632,7 +631,7 @@ section {
   width: 5em;
 }
 
-/*SWIMMERS OF A MONTH*/
+/*BEST SWIMMERS*/
 .best-swimmers {
   position: relative;
   background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/achievements/achievements_small.jpeg");
@@ -1055,7 +1054,6 @@ section {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /*STYLES FOR BEST-SWIMMERS SUBSITE*/
   }
   .header__heading {
     font-size: 12rem;
@@ -1066,15 +1064,15 @@ section {
   .header__btn {
     font-size: 1.6rem;
   }
-  .header .best-swimmers-heading {
-    font-size: 8rem;
-  }
   /*HEADER FOR BEST SWIMMERS SUBSITE*/
   .header-best-swimmers {
     background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/achievements/achievements__big.jpeg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+  }
+  .header-best-swimmers .best-swimmers-heading {
+    font-size: 8rem;
   }
   /*MAIN*/
   /*ABOUT-ME*/
@@ -1093,7 +1091,7 @@ section {
   .why-swim__item img {
     width: 6em;
   }
-  /*SWIMMERS OF A MONTH*/
+  /*BEST SWIMMERS*/
   .best-swimmers .section-heading::before {
     right: 5%;
   }
@@ -1196,7 +1194,7 @@ section {
     background-position: center;
     background-attachment: scroll;
   }
-  /*SWIMMERS OF A MONTH*/
+  /*BEST SWIMMERS*/
   .best-swimmers {
     background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/achievements/achievements__big.jpeg");
     background-size: cover;
@@ -1300,7 +1298,7 @@ section {
 }
 
 @media (min-width: 819px) {
-  /*SWIMMERS OF A MONTH*/
+  /*BEST SWIMMERS*/
   .best-swimmers__card {
     -webkit-transition: -webkit-transform .2s;
     transition: -webkit-transform .2s;
@@ -1351,10 +1349,8 @@ section {
 }
 
 @media (min-width: 1200px) {
-  .header {
-    /*STYLES FOR BEST-SWIMMERS SUBSITE*/
-  }
-  .header .best-swimmers-heading {
+  /*HEADER FOR BEST SWIMMERS SUBSITE*/
+  .header-best-swimmers .best-swimmers-heading {
     font-size: 10rem;
   }
   /*ABOUT ME*/
@@ -1362,7 +1358,7 @@ section {
     padding-bottom: 10em;
   }
   /*MAIN*/
-  /*SWIMMERS OF A MONTH*/
+  /*BEST SWIMMERS*/
   .best-swimmers {
     padding-bottom: 20em;
   }

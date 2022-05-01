@@ -147,17 +147,16 @@ section {
 
         opacity: 0;
     }
-
-    /*STYLES FOR BEST-SWIMMERS SUBSITE*/
-    .best-swimmers-heading {
-        font-size: 5rem;
-    }
 }
 
 /*HEADER FOR BEST SWIMMERS SUBSITE*/ 
 .header-best-swimmers {
     @include headerStyles;
     @include heroImages('../img/achievements/achievements_small.jpeg', fixed);
+
+    .best-swimmers-heading {
+        font-size: 5rem;
+    }
 }
 
 /*MAIN*/
@@ -206,7 +205,7 @@ section {
     }
 }
 
-/*SWIMMERS OF A MONTH*/
+/*BEST SWIMMERS*/
 .best-swimmers {
     position: relative;
     @include heroImages('../img/achievements/achievements_small.jpeg', scroll);
