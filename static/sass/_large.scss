@@ -2,7 +2,10 @@
 
     /*NAVIGATION*/
     .navbar {
-        &__item {
+
+        &__item,
+        &__item-second,
+        &__item-third {
             font-size: 3rem;
         }
     }
@@ -27,8 +30,8 @@
         }
     }
 
-      /*CONTACT*/ 
-      .contact {
+    /*CONTACT*/
+    .contact {
         iframe {
             max-width: 500px;
         }
@@ -40,8 +43,8 @@
         }
     }
 
-       /*FOOTER*/ 
-       .footer {
+    /*FOOTER*/
+    .footer {
         &__box {
             padding-top: 6em;
         }
@@ -49,6 +52,15 @@
 }
 
 @media(min-width: 1200px) {
+
+    .header {
+
+        /*STYLES FOR BEST-SWIMMERS SUBSITE*/
+        .best-swimmers-heading {
+            font-size: 10rem;
+        }
+    }
+
 
     /*ABOUT ME*/
     .about-me {
@@ -62,21 +74,40 @@
 
         &__btn {
             margin: 4em -3em;
+
             a {
                 font-size: 1.3rem;
             }
         }
     }
 
+    /*BEST SWIMMERS SUBSITE*/
+    .all-swimmers {
+        .section-heading {
+            font-size: 6rem;
+        }
+
+        &__box {
+            img {
+                width: auto;
+                height: 500px;
+            }
+        }
+    }
+
     /*NEWS*/
     .news {
+        &__body {
+            min-height: 250px;
+        }
+
         &__text-btn {
             font-size: 1.5rem;
         }
     }
 
-       /*FOOTER*/ 
-       .footer {
+    /*FOOTER*/
+    .footer {
         &__box {
             padding-top: 6vw;
 

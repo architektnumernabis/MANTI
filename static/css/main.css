@@ -10,11 +10,12 @@
 
 /*COMPONTENTS*/
 /*COLORS*/
+/*MIXINS*/
 /*HAMBURGER ICON*/
 .hamburger {
   position: fixed;
   top: 20px;
-  right: 20px;
+  right: 0px;
   padding: 1em;
   display: inline-block;
   cursor: pointer;
@@ -160,7 +161,8 @@
   overflow: hidden;
 }
 
-.button::after, .button::before {
+.button::after,
+.button::before {
   position: absolute;
   display: block;
   content: '';
@@ -200,6 +202,19 @@
   color: rgba(0, 0, 0, 0.1);
   left: 0;
   top: 5%;
+}
+
+.section-month {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 1em 0;
+  color: #fff;
+  color: black;
+  font-size: 1.5rem;
+  color: rgba(12, 186, 186, 0.75);
 }
 
 .section-padding {
@@ -243,9 +258,15 @@
   .section-heading {
     font-size: 3rem;
   }
+  .section-month {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 576px) {
+  .hamburger {
+    right: 20px;
+  }
   .section-heading {
     font-size: 4rem;
   }
@@ -257,6 +278,15 @@
 @media (min-width: 768px) {
   .section-heading::before {
     font-size: 3em;
+  }
+  .section-month {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-month {
+    font-size: 3rem;
   }
 }
 
@@ -349,6 +379,7 @@ section {
           transform: translateX(100%);
   -webkit-transition: .4s ease-in;
   transition: .4s ease-in;
+  /*STYLES FOR BEST-SWIMMERS SUBSITE*/
 }
 
 @supports ((-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem))) {
@@ -364,7 +395,7 @@ section {
           transform: translateX(0);
 }
 
-.navbar__item {
+.navbar__item, .navbar__item-second, .navbar__item-third {
   position: relative;
   display: block;
   margin: 0.5em 0;
@@ -375,7 +406,7 @@ section {
   text-transform: uppercase;
 }
 
-.navbar__item::before {
+.navbar__item::before, .navbar__item-second::before, .navbar__item-third::before {
   position: absolute;
   content: '';
   bottom: 0;
@@ -391,14 +422,45 @@ section {
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.navbar__item:hover::before {
+.navbar__item:hover::before, .navbar__item-second:hover::before, .navbar__item-third:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-.navbar__item span {
+.navbar__item span, .navbar__item-second span, .navbar__item-third span {
   letter-spacing: 0.2em;
   font-weight: bold;
+}
+
+.navbar__paragraph {
+  position: relative;
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em 2em;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  font-size: 1rem;
+}
+
+.navbar__paragraph:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.navbar__arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 5%;
+  height: 15px;
 }
 
 /*HEADER*/
@@ -421,12 +483,13 @@ section {
   height: 90vh;
   padding: 2em;
   text-align: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
   background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/header/header_mini.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+  /*STYLES FOR BEST-SWIMMERS SUBSITE*/
 }
 
 .header__heading {
@@ -480,6 +543,38 @@ section {
   -webkit-animation: fade-in 3s 4s forwards;
           animation: fade-in 3s 4s forwards;
   opacity: 0;
+}
+
+.header .best-swimmers-heading {
+  font-size: 5rem;
+}
+
+/*HEADER FOR BEST SWIMMERS SUBSITE*/
+.header-best-swimmers {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  height: 90vh;
+  padding: 2em;
+  text-align: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+  background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/achievements/achievements_small.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /*MAIN*/
@@ -603,6 +698,46 @@ section {
   font-size: 1.1rem;
 }
 
+/*BEST SWIMMERS SUBSITE*/
+.all-swimmers {
+  padding: 0;
+}
+
+.all-swimmers .section-heading {
+  color: black;
+  padding-bottom: 0;
+}
+
+.all-swimmers .section-heading::before {
+  content: '';
+}
+
+.all-swimmers__box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 2em;
+  padding: 2em;
+  text-align: center;
+}
+
+.all-swimmers__box img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.all-swimmers .white-block {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 15vw;
+  background-color: #fff;
+  z-index: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 50% 100%, 0 calc(100% - 10vw));
+}
+
 /*NEWS*/
 .news {
   padding: 0 2em;
@@ -664,7 +799,6 @@ section {
           transform: perspective(600px) rotateY(180deg);
   background: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75));
   text-align: center;
-  height: inherit;
   min-height: 20vw;
 }
 
@@ -682,17 +816,21 @@ section {
 }
 
 .news .slick-arrow {
-  top: 50%;
+  top: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
 .news .slick-prev {
-  left: -40px;
+  left: 46%;
 }
 
 .news .slick-next {
-  right: -40px;
+  right: 46%;
+}
+
+.news .slick-list {
+  overflow: visible;
 }
 
 /*CONTACT*/
@@ -857,8 +995,11 @@ section {
 /*BREAKPOINTS*/
 @media (min-width: 375px) {
   /*NAVIGATION*/
-  .navbar__item {
+  .navbar__item, .navbar__item-second, .navbar__item-third {
     font-size: 1.6rem;
+  }
+  .navbar__paragraph {
+    font-size: 1.3rem;
   }
   /*HEADER*/
   .header__heading {
@@ -868,6 +1009,10 @@ section {
   /*SWIMMERS OF THE MONTH*/
   .best-swimmers .section-heading::before {
     top: 7%;
+  }
+  /*BEST SWIMMERS SUBSITE*/
+  .all-swimmers__box--left, .all-swimmers__box--right {
+    font-size: 1.5rem;
   }
   /*CONTACT*/
   .contact iframe {
@@ -895,8 +1040,14 @@ section {
     top: 32px;
     width: 30%;
   }
-  .navbar__item {
+  .navbar__item, .navbar__item-second, .navbar__item-third {
     font-size: 2.5rem;
+  }
+  .navbar__paragraph {
+    font-size: 1.8rem;
+  }
+  .navbar__arrow {
+    height: 24px;
   }
   /*HEADER*/
   .header {
@@ -904,6 +1055,7 @@ section {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    /*STYLES FOR BEST-SWIMMERS SUBSITE*/
   }
   .header__heading {
     font-size: 12rem;
@@ -913,6 +1065,16 @@ section {
   }
   .header__btn {
     font-size: 1.6rem;
+  }
+  .header .best-swimmers-heading {
+    font-size: 8rem;
+  }
+  /*HEADER FOR BEST SWIMMERS SUBSITE*/
+  .header-best-swimmers {
+    background-image: linear-gradient(315deg, rgba(12, 186, 186, 0.75), rgba(56, 0, 54, 0.75)), url("../img/achievements/achievements__big.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }
   /*MAIN*/
   /*ABOUT-ME*/
@@ -937,6 +1099,43 @@ section {
   }
   .best-swimmers__btn {
     padding: 0.6em 1.5em;
+  }
+  /*BEST SWIMMERS SUBSITE*/
+  .all-swimmers .section-heading {
+    padding-bottom: 1em;
+  }
+  .all-swimmers .container .all-swimmers__box:nth-of-type(odd) .all-swimmers__box--left {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .all-swimmers .container .all-swimmers__box:nth-of-type(odd) .all-swimmers__box--right {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  .all-swimmers__box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 3em;
+  }
+  .all-swimmers__box--left, .all-swimmers__box--right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   /*NEWS*/
   .news .section-heading::before {
@@ -1012,9 +1211,13 @@ section {
   .best-swimmers__btn {
     padding: 0.6em 1.5em;
   }
+  /*BEST SWIMMERS SUBSITE*/
+  .all-swimmers__box--left, .all-swimmers__box--right {
+    font-size: 2rem;
+  }
   /*NEWS*/
   .news .section-heading::before {
-    top: -15%;
+    top: 5%;
     left: 0;
   }
   .news__text-btn {
@@ -1114,7 +1317,7 @@ section {
 
 @media (min-width: 992px) {
   /*NAVIGATION*/
-  .navbar__item {
+  .navbar__item, .navbar__item-second, .navbar__item-third {
     font-size: 3rem;
   }
   /*ABOUT ME*/
@@ -1148,6 +1351,12 @@ section {
 }
 
 @media (min-width: 1200px) {
+  .header {
+    /*STYLES FOR BEST-SWIMMERS SUBSITE*/
+  }
+  .header .best-swimmers-heading {
+    font-size: 10rem;
+  }
   /*ABOUT ME*/
   .about-me {
     padding-bottom: 10em;
@@ -1163,7 +1372,18 @@ section {
   .best-swimmers__btn a {
     font-size: 1.3rem;
   }
+  /*BEST SWIMMERS SUBSITE*/
+  .all-swimmers .section-heading {
+    font-size: 6rem;
+  }
+  .all-swimmers__box img {
+    width: auto;
+    height: 500px;
+  }
   /*NEWS*/
+  .news__body {
+    min-height: 250px;
+  }
   .news__text-btn {
     font-size: 1.5rem;
   }

@@ -28,8 +28,19 @@
     }
 
     .navbar {
-        &__item {
+
+        &__item,
+        &__item-second,
+        &__item-third {
             font-size: 2.5rem;
+        }
+
+        &__paragraph {
+            font-size: 1.8rem;
+        }
+
+        &__arrow {
+            height: 24px;
         }
     }
 
@@ -48,6 +59,16 @@
         &__btn {
             font-size: 1.6rem;
         }
+
+        /*STYLES FOR BEST-SWIMMERS SUBSITE*/
+        .best-swimmers-heading {
+            font-size: 8rem;
+        }
+    }
+
+    /*HEADER FOR BEST SWIMMERS SUBSITE*/
+    .header-best-swimmers {
+        @include heroImages('../img/achievements/achievements__big.jpeg', fixed);
     }
 
     /*MAIN*/
@@ -88,6 +109,42 @@
 
         &__btn {
             padding: 0.6em 1.5em;
+        }
+    }
+
+    /*BEST SWIMMERS SUBSITE*/
+    .all-swimmers {
+        .section-heading {
+            padding-bottom: 1em;
+        }
+
+        .container {
+            .all-swimmers__box:nth-of-type(odd) {
+                .all-swimmers__box--left {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+
+                .all-swimmers__box--right {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+            }
+        }
+
+        &__box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em;
+            padding: 3em;
+
+            &--left,
+            &--right {
+                display: flex;
+                flex-direction: column;
+            }
+
+
         }
     }
 
@@ -177,11 +234,22 @@
         }
     }
 
+    /*BEST SWIMMERS SUBSITE*/
+    .all-swimmers {
+        &__box {
+
+            &--left,
+            &--right {
+                font-size: 2rem;
+            }
+        }
+    }
+
     /*NEWS*/
     .news {
         .section-heading {
             &::before {
-                top: -15%;
+                top: 5%;
                 left: 0;
             }
         }

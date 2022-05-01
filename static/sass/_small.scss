@@ -1,19 +1,28 @@
 @media(min-width: 375px) {
-    /*NAVIGATION*/ 
+
+    /*NAVIGATION*/
     .navbar {
-        &__item {
+
+        &__item,
+        &__item-second,
+        &__item-third {
             font-size: 1.6rem;
         }
+
+        &__paragraph {
+            font-size: 1.3rem;
+        }
     }
-    /*HEADER*/ 
+
+    /*HEADER*/
     .header {
         &__heading {
             font-size: 8rem;
         }
     }
 
-    /*MAIN*/ 
-    /*SWIMMERS OF THE MONTH*/ 
+    /*MAIN*/
+    /*SWIMMERS OF THE MONTH*/
     .best-swimmers {
         .section-heading {
             &::before {
@@ -22,16 +31,27 @@
         }
     }
 
-    /*CONTACT*/ 
-    .contact {
-       iframe {
-           max-width: 300px;
-       }
+    /*BEST SWIMMERS SUBSITE*/
+    .all-swimmers {
+        &__box {
 
-       &__box {
-        h3 {
-            font-size: 2rem;
+            &--left,
+            &--right {
+                font-size: 1.5rem;
+            }
         }
     }
+
+    /*CONTACT*/
+    .contact {
+        iframe {
+            max-width: 300px;
+        }
+
+        &__box {
+            h3 {
+                font-size: 2rem;
+            }
+        }
     }
 }

@@ -49,15 +49,10 @@ section {
         transform: translateX(0);
     }
 
-    &__item {
-        position: relative;
-        display: block;
-        margin: 0.5em 0;
-        padding: 0.5em 2em;
-        font-size: 1.2rem;
-        color: $white;
-        text-decoration: none;
-        text-transform: uppercase;
+    &__item,
+    &__item-second,
+    &__item-third {
+        @include navbar__item;
 
         &::before {
             position: absolute;
@@ -80,25 +75,32 @@ section {
             font-weight: bold;
         }
     }
+
+    /*STYLES FOR BEST-SWIMMERS SUBSITE*/
+    &__paragraph {
+        @include navbar__item;
+        text-align: center;
+        transition: transform .3s;
+        font-size: 1rem;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5%;
+        height: 15px;
+    }
 }
 
 /*HEADER*/
 .header {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-    height: 90vh;
-    padding: 2em;
-    text-align: center;
+    @include headerStyles;
     @include heroImages('../img/header/header_mini.jpeg', fixed);
-    clip-path: polygon(0 0,
-            100% 0,
-            100% calc(100% - 10vw),
-            50% 100%,
-            0 calc(100% - 10vw));
 
     &__heading {
         font-family: 'Bungee', cursive;
@@ -145,6 +147,17 @@ section {
 
         opacity: 0;
     }
+
+    /*STYLES FOR BEST-SWIMMERS SUBSITE*/
+    .best-swimmers-heading {
+        font-size: 5rem;
+    }
+}
+
+/*HEADER FOR BEST SWIMMERS SUBSITE*/ 
+.header-best-swimmers {
+    @include headerStyles;
+    @include heroImages('../img/achievements/achievements_small.jpeg', fixed);
 }
 
 /*MAIN*/
@@ -256,6 +269,38 @@ section {
     }
 }
 
+/*BEST SWIMMERS SUBSITE*/
+.all-swimmers {
+    padding: 0;
+
+    .section-heading {
+        color: $black;
+        padding-bottom: 0;
+
+        &::before {
+            content: '';
+        }
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;
+        padding: 2em;
+        text-align: center;
+
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    .white-block {
+        @include white-block;
+    }
+}
+
 /*NEWS*/
 .news {
     padding: 0 2em;
@@ -295,6 +340,7 @@ section {
         backface-visibility: hidden;
         transition: transform .6s;
         border-radius: 8px;
+
     }
 
     &__img {
@@ -303,6 +349,8 @@ section {
         height: 100%;
         object-fit: cover;
         transform: perspective(600px) rotateY(0deg);
+
+
     }
 
     &__body {
@@ -310,9 +358,7 @@ section {
         transform: perspective(600px) rotateY(180deg);
         background: $main-gradient;
         text-align: center;
-        height: inherit;
         min-height: 20vw;
-       
     }
 
     &__text-btn {
@@ -330,16 +376,20 @@ section {
 
 
     .slick-arrow {
-        top: 50%;
+        top: 0;
         transform: translateY(-50%);
     }
 
     .slick-prev {
-        left: -40px;
+        left: 46%;
     }
 
     .slick-next {
-        right: -40px;
+        right: 46%;
+    }
+
+    .slick-list {
+        overflow: visible;
     }
 }
 
@@ -403,17 +453,7 @@ section {
     }
 
     .white-block {
-        position: relative;
-        bottom: 0px;
-        width: 100%;
-        height: 15vw;
-        background-color: $white;
-        z-index: 1;
-        clip-path: polygon(0 0,
-                100% 0,
-                100% calc(100% - 10vw),
-                50% 100%,
-                0 calc(100% - 10vw));
+        @include white-block;
     }
 }
 

@@ -56,7 +56,7 @@ $('.news-carousel').slick({
             }
         },
         {
-            breakpoint: 1300,
+            breakpoint: 1200,
             settings: {
                 arrows: true,
                 slidesToShow: 2
