@@ -10,6 +10,13 @@
         }
     }
 
+    /*HEADER FOR BEST SWIMMERS*/
+    .header-best-swimmers {
+        img {
+            height: 40px;
+        }
+    }
+
     /*ABOUT ME*/
     .about-me {
         @include backgroundGradient('../img/about-me/about-me-big.jpeg');

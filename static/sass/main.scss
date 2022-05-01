@@ -144,7 +144,6 @@ section {
     &__btn {
         bottom: 6em;
         animation: fade-in 3s 4s forwards;
-
         opacity: 0;
     }
 }
@@ -156,6 +155,12 @@ section {
 
     .best-swimmers-heading {
         font-size: 5rem;
+    }
+
+    a {
+        position: absolute;
+        bottom: 4em;
+        animation: pulse 1s infinite 0.5s alternate;
     }
 }
 
@@ -448,6 +453,7 @@ section {
             width: 50%;
             margin: 2em auto;
             cursor: pointer;
+            color: $black;
         }
     }
 
@@ -462,18 +468,6 @@ section {
     color: $white;
     position: relative;
     margin-top: -10vw;
-
-    /* &::before {
-        content: '';
-        position: absolute;
-        clip-path: polygon(50% calc(100% - 10vw), 0 0, 100% 0);
-        top: 0;
-        height: 200px;
-        width: 100%;
-        background-color: red;
-        z-index: 100;
-    }*/
-
 
     &__box {
         display: grid;
