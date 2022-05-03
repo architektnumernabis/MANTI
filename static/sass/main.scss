@@ -146,7 +146,7 @@ section {
     }
 }
 
-/*HEADER FOR BEST SWIMMERS SUBSITE*/ 
+/*HEADER FOR BEST SWIMMERS SUBSITE*/
 .header-best-swimmers {
     @include headerStyles;
     @include heroImages('../img/achievements/achievements_small.jpeg', fixed);
@@ -344,7 +344,7 @@ section {
     &__help {
         position: absolute;
         z-index: 100;
-        right:5px;
+        right: 5px;
         top: 5px;
         backface-visibility: hidden;
         transition: transform .6s;
