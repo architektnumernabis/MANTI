@@ -11,6 +11,7 @@ depending on a background. After a research I chose the simples one. In the near
 This site will be put online. 
 
 Projekt strony internetowej szkoły pływania MANTI 
+#
 --PL--
 ###
 Celem tego projektu było stworzenie nowoczesnej, funkcjonalnej strony internetowej z uwzględnieniem RWD. 
