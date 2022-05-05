@@ -9,9 +9,9 @@ As in my previous projects, I used slick.js (https://github.com/kenwheeler/slick
 I used BEM in SCSS files and I took extra care for my code to look clean. Main difficult in this project was to change color of hamburger menu 
 depending on a background. After a research I chose the simples one. In the near future I want to improve it.  
 This site will be put online. 
-
-Projekt strony internetowej szkoły pływania MANTI 
 #
+Projekt strony internetowej szkoły pływania MANTI 
+###
 --PL--
 ###
 Celem tego projektu było stworzenie nowoczesnej, funkcjonalnej strony internetowej z uwzględnieniem RWD. 
