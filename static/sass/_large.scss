@@ -123,3 +123,25 @@
         }
     }
 }
+
+@media (min-width: 1400px) {
+
+    /*WHY SWIM*/
+    .why-swim {
+        .section-heading {
+            padding-top: 2em;
+        }
+    }
+
+    /*BEST SWIMMERS*/
+    .best-swimmers {
+        padding-bottom: 25em;
+    }
+
+    /*CONTACT*/
+    .contact {
+        .white-block {
+            height: 12vw;
+        }
+    }
+}
