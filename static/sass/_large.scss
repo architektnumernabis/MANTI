@@ -133,15 +133,59 @@
         }
     }
 
+    .why-swim.section-padding {
+        padding: 13em 2em;
+    }
+
     /*BEST SWIMMERS*/
     .best-swimmers {
-        padding-bottom: 25em;
+        padding-bottom: 27em;
     }
 
     /*CONTACT*/
     .contact {
         .white-block {
-            height: 12vw;
+            height: 10vw;
+        }
+    }
+}
+
+@media (min-width: 2100px) {
+
+    /*WHY-SWIM*/
+    .why-swim {
+        padding: 20em 2em;
+    }
+
+    /*BEST SWIMMERS*/
+    .best-swimmers {
+        padding-bottom: 32em;
+    }
+
+    /*CONTACT*/
+    .contact {
+        .white-block {
+            height: 10vw;
+        }
+    }
+
+    /*FOOTER*/
+    .footer {
+        &__box {
+            &--three {
+                padding-top: 2em;
+            }
+        }
+    }
+}
+
+@media (min-width: 4000px) {
+     /*FOOTER*/
+     .footer {
+        &__box {
+            &--three {
+                padding-top: 4em;
+            }
         }
     }
 }
