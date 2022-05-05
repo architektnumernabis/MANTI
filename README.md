@@ -1,7 +1,7 @@
 # MANTI
-MANTI swimming school website project
-
 --ENG--
+
+MANTI swimming school website project
 ###
 The aim of this project was to create user-friendly, nice looking and responsive website. 
 I contacted a swimming instructor and made him an offer. I wanted to practice my flexbox and grid skills so I used them in order to position elements. 
@@ -10,9 +10,9 @@ I used BEM in SCSS files and I took extra care for my code to look clean. Main d
 depending on a background. After a research I chose the simples one. In the near future I want to improve it.  
 This site will be put online. 
 #
-Projekt strony internetowej szkoły pływania MANTI 
-###
 --PL--
+###
+Projekt strony internetowej szkoły pływania MANTI 
 ###
 Celem tego projektu było stworzenie nowoczesnej, funkcjonalnej strony internetowej z uwzględnieniem RWD. 
 Skontaktowałem się z instruktorem nauki pływania i zaproponowałem mu stworzenie owej strony. Całość wykonałem przy użyciu 
