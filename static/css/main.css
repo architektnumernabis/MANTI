@@ -601,8 +601,8 @@ section {
 .header-best-swimmers a {
   position: absolute;
   bottom: 4em;
-  -webkit-animation: pulse 1s infinite 0.5s alternate;
-          animation: pulse 1s infinite 0.5s alternate;
+  -webkit-animation: pulse 0.5s infinite  alternate;
+          animation: pulse 0.5s infinite  alternate;
 }
 
 /*MAIN*/
@@ -748,6 +748,19 @@ section {
   gap: 2em;
   padding: 2em;
   text-align: center;
+}
+
+.all-swimmers__box--left {
+  position: relative;
+}
+
+.all-swimmers__box--left .img-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
+  height: 50%;
+  visibility: hidden;
 }
 
 .all-swimmers__box img {
@@ -912,7 +925,7 @@ section {
 .contact__box h3 {
   text-transform: uppercase;
   font-size: 1.6rem;
-  padding-bottom: 1.5em;
+  padding-bottom: 1em;
 }
 
 .contact__box form {
@@ -1154,6 +1167,9 @@ section {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
+  }
+  .all-swimmers .container .all-swimmers__box:nth-of-type(odd) .all-swimmers__box--left .img-bg {
+    left: 50%;
   }
   .all-swimmers .container .all-swimmers__box:nth-of-type(odd) .all-swimmers__box--right {
     -ms-grid-column: 1;
@@ -1421,7 +1437,10 @@ section {
   .all-swimmers .section-heading {
     font-size: 6rem;
   }
-  .all-swimmers__box img {
+  .all-swimmers__box--left .img-bg {
+    visibility: visible;
+  }
+  .all-swimmers__box--left img {
     width: auto;
     height: 500px;
   }
@@ -1441,18 +1460,73 @@ section {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) and (min-width: 1400px) {
   /*WHY SWIM*/
   .why-swim .section-heading {
     padding-top: 2em;
   }
+  .why-swim.section-padding {
+    padding: 13em 2em;
+  }
   /*BEST SWIMMERS*/
   .best-swimmers {
-    padding-bottom: 25em;
+    padding-bottom: 27em;
   }
   /*CONTACT*/
   .contact .white-block {
     height: 12vw;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 2100px) {
+  /*WHY-SWIM*/
+  .why-swim {
+    padding: 20em 2em;
+  }
+  /*BEST SWIMMERS*/
+  .best-swimmers {
+    padding-bottom: 32em;
+  }
+  /*FOOTER*/
+  .footer__box--three {
+    padding-top: 2em;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 2500px) {
+  /*WHY SWIM*/
+  .why-swim.section-padding {
+    padding: 17em 2em;
+  }
+  /*BEST SWIMMERS*/
+  .best-swimmers {
+    padding: 17em 0 32em;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 3500px) {
+  /*WHY SWIM*/
+  .why-swim.section-padding {
+    padding: 20em 2em;
+  }
+  /*BEST SWIMMERS*/
+  .best-swimmers {
+    padding: 20em 0 32em;
+  }
+}
+
+@media (min-width: 1200px) and (min-width: 4000px) {
+  /*WHY SWIM*/
+  .why-swim.section-padding {
+    padding: 24em 2em;
+  }
+  /*BEST SWIMMERS*/
+  .best-swimmers {
+    padding: 24em 0 35em;
+  }
+  /*FOOTER*/
+  .footer__box--three {
+    padding-top: 4em;
   }
 }
 /*# sourceMappingURL=main.css.map */

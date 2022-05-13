@@ -8,6 +8,8 @@ const aboutMe = document.querySelector('.about-me');
 const whySwim = document.querySelector('.why-swim');
 const news = document.querySelector('.news');
 var windowWidth = window.innerWidth;
+const bestSwimmers = document.querySelector('.best-swimmers');
+//bestSwimmers.offsetHeight;
 
 const allSections = document.querySelectorAll('.section');
 
@@ -26,17 +28,20 @@ const handleNav = () => {
 
 navButton.addEventListener('click', handleNav);
 
-
 //function that changes color of burger-btn depending on section
 const buttonColorChange = () => {
     const currentSection = window.scrollY;
 
     allSections.forEach(section => {
-        if (section.offsetTop - ((0.1 * windowWidth) + 48) < currentSection && section.classList.contains('white-section')) {
+        if (section.offsetTop - ((0.1 * windowWidth) + 48) < currentSection && section.classList.contains('white-section') && (section.classList.contains('about-me') || section.classList.contains('all-swimmers'))) {
+            //this is for about-me section
             navButtonInner.classList.add('hamburger-black');
-            console.log(section);
-        } else if (!section.classList.contains('white-section') && section.offsetTop + 0.1*windowWidth - 48  < currentSection) {
+        } else if (!section.classList.contains('white-section') && !section.classList.contains('best-swimmers') && section.offsetTop + 0.1 * windowWidth - 48 < currentSection) {
+            //this is for whi-swim section
             navButtonInner.classList.remove('hamburger-black');
+        } else if (section.classList.contains('best-swimmers') && section.offsetTop + section.offsetHeight - 48 < currentSection) {
+            //this case is for best-swimmers section
+            navButtonInner.classList.add('hamburger-black');
         }
     });
 }

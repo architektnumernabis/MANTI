@@ -94,9 +94,16 @@
         }
 
         &__box {
-            img {
-                width: auto;
-                height: 500px;
+            &--left {
+
+                .img-bg {
+                    visibility: visible;
+                }
+
+                img {
+                    width: auto;
+                    height: 500px;
+                }
             }
         }
     }
@@ -122,69 +129,99 @@
             }
         }
     }
-}
 
-@media (min-width: 1400px) {
 
-    /*WHY SWIM*/
-    .why-swim {
-        .section-heading {
-            padding-top: 2em;
-        }
-    }
+    @media (min-width: 1400px) {
 
-    .why-swim.section-padding {
-        padding: 13em 2em;
-    }
-
-    /*BEST SWIMMERS*/
-    .best-swimmers {
-        padding-bottom: 27em;
-    }
-
-    /*CONTACT*/
-    .contact {
-        .white-block {
-            height: 10vw;
-        }
-    }
-}
-
-@media (min-width: 2100px) {
-
-    /*WHY-SWIM*/
-    .why-swim {
-        padding: 20em 2em;
-    }
-
-    /*BEST SWIMMERS*/
-    .best-swimmers {
-        padding-bottom: 32em;
-    }
-
-    /*CONTACT*/
-    .contact {
-        .white-block {
-            height: 10vw;
-        }
-    }
-
-    /*FOOTER*/
-    .footer {
-        &__box {
-            &--three {
+        /*WHY SWIM*/
+        .why-swim {
+            .section-heading {
                 padding-top: 2em;
             }
         }
-    }
-}
 
-@media (min-width: 4000px) {
-     /*FOOTER*/
-     .footer {
-        &__box {
-            &--three {
-                padding-top: 4em;
+        .why-swim.section-padding {
+            padding: 13em 2em;
+        }
+
+        /*BEST SWIMMERS*/
+        .best-swimmers {
+            padding-bottom: 27em;
+        }
+
+        /*CONTACT*/
+        .contact {
+            .white-block {
+                height: 12vw;
+            }
+        }
+    }
+
+    @media (min-width: 2100px) {
+
+        /*WHY-SWIM*/
+        .why-swim {
+            padding: 20em 2em;
+        }
+
+        /*BEST SWIMMERS*/
+        .best-swimmers {
+            padding-bottom: 32em;
+        }
+
+        /*FOOTER*/
+        .footer {
+            &__box {
+                &--three {
+                    padding-top: 2em;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 2500px) {
+
+        /*WHY SWIM*/
+        .why-swim.section-padding {
+            padding: 17em 2em;
+        }
+
+        /*BEST SWIMMERS*/
+        .best-swimmers {
+            padding: 17em 0 32em;
+        }
+    }
+
+    @media (min-width: 3500px) {
+
+        /*WHY SWIM*/
+        .why-swim.section-padding {
+            padding: 20em 2em;
+        }
+
+        /*BEST SWIMMERS*/
+        .best-swimmers {
+            padding: 20em 0 32em;
+        }
+    }
+
+    @media (min-width: 4000px) {
+         /*WHY SWIM*/
+         .why-swim.section-padding {
+            padding: 24em 2em;
+        }
+
+        /*BEST SWIMMERS*/
+        .best-swimmers {
+            padding: 24em 0 35em;
+        }
+
+        /*FOOTER*/
+        .footer {
+            &__box {
+                &--three {
+                    padding-top: 4em;
+                }
             }
         }
     }
