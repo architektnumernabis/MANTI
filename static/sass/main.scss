@@ -158,7 +158,7 @@ section {
     a {
         position: absolute;
         bottom: 4em;
-        animation: pulse 0.5s infinite  alternate;
+        animation: pulse 0.5s infinite alternate;
     }
 }
 
@@ -173,8 +173,27 @@ section {
         color: $black;
     }
 
-    p {
-        padding: 2em 5em;
+    &__content {
+        .img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                box-shadow: 5px 5px 10px $shadow;
+            }
+        }
+
+        .description {
+            display: flex;
+            align-items: center;
+            padding: 2em 1em;
+            font-size: 1.3rem;
+            margin-bottom: 3em;
+        }
     }
 }
 
@@ -543,6 +562,40 @@ section {
                 color: grey;
                 margin: auto 0;
             }
+        }
+    }
+}
+
+/*POPUP ADD*/
+.bg-popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $shadow;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        position: relative;
+        max-height: 700px;
+        max-width: 500px;
+        padding: 2em;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: -20px;
+            right: 17px;
+            padding: 10px;
+            font-size: 6rem;
+            transform: rotate(45deg);
+            cursor: pointer;
         }
     }
 }

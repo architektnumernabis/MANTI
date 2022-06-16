@@ -84,8 +84,17 @@
             }
         }
 
-        p {
-            font-size: 1.4rem;
+        &__content {
+            .img {
+                img {
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+
+            .description {
+                font-size: 1.6rem;
+            }
         }
     }
 
@@ -216,7 +225,19 @@
 
         &__content {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2,1fr);
+            gap: 5em;
+
+            .img {
+                img {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+
+            .description {
+                margin-bottom: 0;
+            }
         }
     }
 

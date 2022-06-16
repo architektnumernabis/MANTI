@@ -9,7 +9,9 @@ const whySwim = document.querySelector('.why-swim');
 const news = document.querySelector('.news');
 var windowWidth = window.innerWidth;
 const bestSwimmers = document.querySelector('.best-swimmers');
-//bestSwimmers.offsetHeight;
+const closeButton = document.querySelector('.close');
+const popUp = document.querySelector('.bg-popup');
+
 
 const allSections = document.querySelectorAll('.section');
 
@@ -47,3 +49,14 @@ const buttonColorChange = () => {
 }
 
 window.addEventListener('scroll', buttonColorChange);
+
+//function that opens popup after loading page and closes popup after clicking on X
+closeButton.addEventListener('click', function() {
+    popUp.style.display = "none";
+})
+
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        popUp.style.display = "flex";
+    }, 2000)
+})
