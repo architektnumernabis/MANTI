@@ -58,5 +58,5 @@ closeButton.addEventListener('click', function() {
 window.addEventListener('load', function() {
     setTimeout(function() {
         popUp.style.display = "flex";
-    }, 2000)
+    }, 1500)
 })
